@@ -23,7 +23,7 @@ STATES = sorted(df["State"].unique())
 selected_states = st.multiselect(
     "Select up to 3 States",
     options=STATES,
-    default=STATES[0:2],
+    default=STATES[5:],
     max_selections=4,  # ⚠️ Streamlit 1.27+ supporte max_selections
     help="You can compare up to 4 states at a time",
 )
