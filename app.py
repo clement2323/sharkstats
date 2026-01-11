@@ -16,7 +16,7 @@ st.set_page_config(
 )
 
 # Titre
-st.title("📊 Incidents by State Dashboard")
+st.title("📊 Shark incidents by State Dashboard")
 
 # --- Sélection des États avec limite à 3 ---
 STATES = sorted(df["State"].unique())
