@@ -75,9 +75,13 @@ st.subheader("State vs Peer Average")
 NUM_COLS = min(len(selected_states), 3)  # limiter à 3 colonnes
 graph_cols = st.columns(NUM_COLS)
 
+peers = df[
+    (df["Incident.year"] >= selected_year[0])
+    & (df["Incident.year"] <= selected_year[1])
+]
+
 for i, state in enumerate(selected_states):
     # state= "WA"
-    peers = df
     # --- Graphs par heure ---
     state_data_hour = (
         filtered_df[filtered_df["State"] == state]["Hour_ceil"]
